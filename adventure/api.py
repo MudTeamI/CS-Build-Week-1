@@ -76,4 +76,4 @@ def rooms(request):
         print(rm)
         rm_list.append({'id': rm.id, 'title': rm.title, 'description': rm.description,
                         'n': rm.n_to, 's': rm.s_to, 'e': rm.e_to, 'w': rm.w_to})
-    return JsonResponse({'rooms': rm_list}, safe=True
+    return JsonResponse({'rooms': rm_list}, safe=True)

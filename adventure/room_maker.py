@@ -101,7 +101,7 @@ class MazeRoom():
         for y in range(self.y):
             for x in range(self.x):
                 self.maze_room[y][x] = Room(
-                    title='Room', description='you have entered the room')
+                    title='Room', description='you have entered the room', x=x, y=y)
                 self.maze_room[y][x].save()
 
     def link_rooms(self):

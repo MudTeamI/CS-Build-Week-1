@@ -67,7 +67,7 @@ def move(request):
 def say(request):
     # IMPLEMENT
     return JsonResponse({'error': "Not yet implemented"}, safe=True, status=500)
-  
+
 
 @api_view(["GET"])
 def rooms(request):
@@ -76,6 +76,5 @@ def rooms(request):
     for rm in every_room:
         print(rm)
         rm_list.append({'id': rm.id, 'title': rm.title, 'description': rm.description,
-                        'n': rm.n_to, 's': rm.s_to, 'e': rm.e_to, 'w': rm.w_to})
+                        'n': rm.n_to, 's': rm.s_to, 'e': rm.e_to, 'w': rm.w_to, 'x': rm.x, 'y': rm.y})
     return JsonResponse({'rooms': rm_list}, safe=True)
-

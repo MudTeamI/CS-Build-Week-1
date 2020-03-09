@@ -45,5 +45,5 @@ Room.objects.all().delete()
 #     p.currentRoom = r_outside.id
 #     p.save()
 
-create_game = MazeRoom(10, 10)
+create_game = MazeRoom(50, 50)
 create_game.generate_maze()

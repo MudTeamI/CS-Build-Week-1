@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 from .models import *
 from rest_framework.decorators import api_view
 import json
+from .room_maker import MazeRoom
 
 # instantiate pusher
 # pusher = Pusher(app_id=config('PUSHER_APP_ID'), key=config('PUSHER_KEY'), secret=config('PUSHER_SECRET'), cluster=config('PUSHER_CLUSTER'))
@@ -66,7 +67,7 @@ def move(request):
 def say(request):
     # IMPLEMENT
     return JsonResponse({'error': "Not yet implemented"}, safe=True, status=500)
-
+  
 
 @api_view(["GET"])
 def rooms(request):
@@ -77,3 +78,4 @@ def rooms(request):
         rm_list.append({'id': rm.id, 'title': rm.title, 'description': rm.description,
                         'n': rm.n_to, 's': rm.s_to, 'e': rm.e_to, 'w': rm.w_to})
     return JsonResponse({'rooms': rm_list}, safe=True)
+
